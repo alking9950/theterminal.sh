@@ -1,0 +1,200 @@
+> ls /
+..
+bin
+boot
+dev
+etc
+home
+public
+system
+
+> ls /bin
+..
+cat.bin
+ls.bin
+stat.bin
+me.bin
+
+> ls /boot
+..
+
+> ls /dev
+..
+
+> ls /etc
+..
+
+> ls /home
+..
+admin
+martin
+unknown
+user1
+
+> ls /home/admin
+ACCESS DENIED
+
+> ls /home/martin
+ACCESS DENIED
+
+> ls /home/unknown
+..
+btc
+key.txt
+
+> ls /home/unknown/btc
+ACCESS DENIED
+
+> ls /home/user1
+..
+__addr.sql
+deposits.sql
+service.bin
+
+> ls /public
+..
+sql_out.txt
+
+> ls /system
+ACCESS DENIED
+
+> stat /
+File: /
+Owner: system
+Created: 19/11/1983
+Permissions: r
+
+> stat /bin
+File: /bin
+Owner: system
+Created: 19/11/1983
+Permissions: r
+
+> stat /bin/cat.bin
+File: /bin/cat.bin
+Size: 143
+Owner: system
+Created: 19/11/1983
+Permissions: rx
+
+> stat /bin/ls.bin
+File: /bin/ls.bin
+Size: 134
+Owner: system
+Created: 19/11/1983
+Permissions: rx
+
+> stat /bin/stat.bin
+File: /bin/stat.bin
+Size: 143
+Owner: system
+Created: 19/11/1983
+Permissions: rx
+
+> stat /bin/me.bin
+File: /bin/me.bin
+Size: 116
+Owner: system
+Created: 19/11/1983
+Permissions: rx
+
+> stat /boot
+File: /boot
+Owner: system
+Created: 19/11/1983
+Permissions: r
+
+> stat /dev
+File: /dev
+Owner: system
+Created: 19/11/1983
+Permissions: r
+
+> stat /etc
+File: /etc
+Owner: system
+Created: 19/11/1983
+Permissions: r
+
+> stat /home
+File: /home
+Owner: system
+Created: 19/11/1983
+Permissions: r
+
+> stat /home/admin
+File: /home/admin
+Owner: admin
+Created: 19/11/1983
+Permissions: -
+
+> stat /home/martin
+File: /home/martin
+Owner: martin
+Created: 19/11/1983
+Permissions: -
+
+> stat /home/unknown
+File: /home/unknown
+Owner: unknown
+Created: 1/08/2017           # Interesting
+Permissions: r
+
+> stat /home/unknown/btc
+File: /home/unknown/btc
+Owner: unknown
+Created: 1/08/2017
+Permissions: -
+
+> stat /home/unknown/key.txt
+File: /home/unknown/key.txt
+Size: 1674
+Owner: unknown
+Created: 1/08/2017
+Permissions: r
+
+> stat /home/user1
+File: /home/user1
+Owner: user1
+Created: 20/07/2017          # Interesting
+Permissions: r
+
+> stat /home/user1/__addr.sql
+File: /home/user1/__addr.sql
+Size: 80
+Owner: user1
+Created: 20/07/2017
+Permissions: r
+
+> stat /home/user1/deposits.sql
+File: /home/user1/deposits.sql
+Size: 275
+Owner: user1
+Created: 20/07/2017
+Permissions: r
+
+> stat /home/user1/service.bin
+File: /home/user1/service.bin
+Size: 242
+Owner: user1
+Created: 20/07/2017
+Permissions: rx
+
+> stat /public
+File: /public
+Owner: admin
+Created: 19/11/1983
+Permissions: rw
+
+> stat /public/sql_out.txt
+File: /public/sql_out.txt
+Size: 474
+Owner: undefined
+Created: 03/08/2017          # Interesting
+Permissions: r
+
+> stat /system
+File: /system
+Owner: system
+Created: 19/11/1983
+Permissions: -
