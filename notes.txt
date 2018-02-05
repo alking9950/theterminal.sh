@@ -1,0 +1,11 @@
+* sql_out.txt is missing the '1' from 1PAnAkYDHQn83AZHEnoXvvDnuPgKkwpvPc
+* First column is the address second column is the hash 160
+
+
+Addr   Block  Nonce
+1PAnA  2773   1391322658
+1NwC7  2774   1983279132
+1GEbV  2775   65349048
+1GYUZ  2776   3790112039
+1jngx  2777   1949148959
+1K68U  2778   1225964035
