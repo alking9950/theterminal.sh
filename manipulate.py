@@ -3,8 +3,7 @@ from __future__ import print_function
 import os
 import sys
 
-from collections import Counter
-from pprint import pprint
+from codecs import decode
 
 
 KEY = 'B105F00D'
@@ -18,7 +17,6 @@ def main():
     for filename in os.listdir('.'):
         if not filename.endswith('.bin'):
             continue
-        print()
         print(filename)
         with open(filename) as fp:
             data = fp.read().split()
@@ -31,14 +29,11 @@ def main():
             output += block
             xor_output += xor(block)
 
-        with open('{}_plain'.format(filename), 'w') as fp:
-            fp.write(output.decode('hex'))
+        with open('{}_plain'.format(filename), 'wb') as fp:
+            fp.write(decode(output, 'hex'))
 
-        with open('{}_xor'.format(filename), 'w') as fp:
-            fp.write(xor_output.decode('hex'))
-
-
-
+        with open('{}_xor'.format(filename), 'wb') as fp:
+            fp.write(decode(xor_output, 'hex'))
 
     return 0
 
