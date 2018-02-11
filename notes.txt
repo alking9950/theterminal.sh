@@ -23,6 +23,23 @@ in the not found response which is interesting because there still clearly is a
 space after `me`.
 
 
+### Server Side Parsing
+
+Hexidecimal numbers representations are being parsed as numbers (from frownupon
+on discord):
+
+    curl -D- "http://theterminal.sh/repl?command=0xFFFFFFFFFFFFFFFFFF"
+
+Outputs
+
+    <p>4.722366482869645e+21: not found.</p>
+
+However, binary numbers do not:
+
+    curl -D- "http://theterminal.sh/repl?command=0b101"
+
+    <p>0b101: not found.</p>
+
 ## sql_out.txt
 
 * The first line is missing the '1' from 1PAnAkYDHQn83AZHEnoXvvDnuPgKkwpvPc
