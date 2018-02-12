@@ -65,7 +65,7 @@ Addr   Block  Nonce
 
 ### duplicate query parameters
 
-    curl -H -D- "http://theterminal.sh/repl?command=me&command=me"
+    curl -D- "http://theterminal.sh/repl?command=me&command=me"
 
 Returns 409 conflict:
 
