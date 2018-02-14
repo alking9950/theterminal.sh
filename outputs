@@ -10,6 +10,7 @@ system
 
 > ls /bin
 ..
+su.bin
 cat.bin
 ls.bin
 stat.bin
@@ -69,6 +70,13 @@ File: /bin
 Owner: system
 Created: 19/11/1983
 Permissions: r
+
+> stat /bin/su.bin
+File: /bin/su.bin
+Size: 143
+Owner: system
+Created: 19/11/1983
+Permissions: rx
 
 > stat /bin/cat.bin
 File: /bin/cat.bin
