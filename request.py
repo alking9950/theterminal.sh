@@ -26,4 +26,7 @@ def main():
 
 
 if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        run_command(' '.join(sys.argv[1:]))
+        sys.exit(0)
     sys.exit(main())
