@@ -22,6 +22,14 @@ def hex_string_to_integers(hex_string):
     return [int(x, 16) for x in hex_string.split()]
 
 
+def int_to_ascii(number):
+    from struct import pack
+    try:
+        return pack('>I', number).decode('ascii')
+    except UnicodeDecodeError:
+        return None
+
+
 def output(values):
     for position in range(0, len(values), 4):
         print(' '.join(['{:10d}'.format(x)
@@ -39,12 +47,21 @@ def write_file(path, data):
 
 
 def main():
+    integers = []
     for path in bin_file_paths('./server_files'):
         binary_name = os.path.basename(path)
-        print(binary_name)
-        values = hex_string_to_integers(read_file(path))
-        output(values)
-        print()
+        integers.extend(hex_string_to_integers(read_file(path)))
+
+    unique = set(integers)
+    printable = set()
+    for first in unique:
+        for second in unique:
+            result = int_to_ascii(first ^ second)
+            if result:
+                printable.add(result)
+
+    for item in sorted(printable):
+        print(item)
     return 0
 
 
