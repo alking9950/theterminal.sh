@@ -1,40 +1,39 @@
 #!/usr/bin/env python
 from __future__ import print_function
 import os
+import os.path
 import sys
 
 from codecs import decode
 
 
-KEY = 'B105F00D'
-INT_KEY = int(KEY, 16)
+def bin_file_paths(path):
+    file_paths = []
+    for filename in os.listdir(path):
+        if filename.endswith('.bin'):
+            file_paths.append(os.path.join(path, filename))
+    return file_paths
 
 
-def xor(block):
-    return '{:08X}'.format(int(block, 16) ^ INT_KEY)
+def hex_string_to_bytes(hex_string):
+    return decode(b''.join(hex_string.split()), 'hex')
+
+
+def read_file(path):
+    with open(path, 'rb') as fp:
+        return fp.read()
+
+
+def write_file(path, data):
+    with open(path, 'wb') as fp:
+        fp.write(data)
+
 
 def main():
-    for filename in os.listdir('.'):
-        if not filename.endswith('.bin'):
-            continue
-        print(filename)
-        with open(filename) as fp:
-            data = fp.read().split()
-
-        output = ''
-        xor_output = ''
-        for block in data:
-            if block == KEY:
-                continue
-            output += block
-            xor_output += xor(block)
-
-        with open('{}_plain'.format(filename), 'wb') as fp:
-            fp.write(decode(output, 'hex'))
-
-        with open('{}_xor'.format(filename), 'wb') as fp:
-            fp.write(decode(xor_output, 'hex'))
-
+    for path in bin_file_paths('./server_files'):
+        binary_name = os.path.basename(path)
+        data = hex_string_to_bytes(read_file(path))
+        write_file('binary_{}'.format(binary_name), data)
     return 0
 
 
