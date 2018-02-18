@@ -11,7 +11,6 @@ HOST = 'http://theterminal.sh'
 
 def mem(argument):
     response = requests.get('{}/repl?command=mem {}'.format(HOST, argument))
-    #print(response.request.url)
     if response.status_code == 503:
         time.sleep(0.5)
         return mem(argument)
@@ -19,6 +18,7 @@ def mem(argument):
         print(response)
         sys.exit(1)
     return html2text(response.text).strip().replace('\n\n', '\n')
+
 
 def main():
     for i in range(0xB105F00D, 0xB105F00D + 200):
