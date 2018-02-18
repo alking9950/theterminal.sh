@@ -96,6 +96,10 @@ found.
 
 This command appears to only output `127.0.0.1`, localhost.
 
+### mem ADDRESS
+
+Discovered by ludu in Discord channel.
+
 ### motd
 
 Outputs the message of the day:
