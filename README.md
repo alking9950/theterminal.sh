@@ -98,7 +98,29 @@ This command appears to only output `127.0.0.1`, localhost.
 
 ### mem ADDRESS
 
-Discovered by ludu in Discord channel.
+ADDRESS appears that it should be in hexidecimal between 0 and FFFFFFFF,
+however, it doesn't really error out with other characters.
+
+For HEX values of ADDRESS between 0 and 3E7 `mem` responds with:
+
+    ERROR: ADDRESS IS LOCKED.
+
+For many addresses `mem` responds with:
+
+    0000 0000 0000 0000 0000 0000 0000 0000
+
+The HEX contents of a zip file is returned for addresses between B105F00D and
+B105F026.
+
+`mem B105F027` returns:
+
+    undefined
+
+
+Note: While `B105F00D` returns the same result as `b105f00d`, `3E7` returns a
+different result than `3e7`. I'm not sure what to make of that.
+
+Command Discovered by ludu in Discord channel.
 
 ### motd
 
