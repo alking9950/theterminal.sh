@@ -47,21 +47,8 @@ def write_file(path, data):
 
 
 def main():
-    integers = []
-    for path in bin_file_paths('./server_files'):
-        binary_name = os.path.basename(path)
-        integers.extend(hex_string_to_integers(read_file(path)))
-
-    unique = set(integers)
-    printable = set()
-    for first in unique:
-        for second in unique:
-            result = int_to_ascii(first ^ second)
-            if result:
-                printable.add(result)
-
-    for item in sorted(printable):
-        print(item)
+    write_file('mem_output.zip',
+               hex_string_to_bytes(read_file('generated/mem_output.txt')))
     return 0
 
 
