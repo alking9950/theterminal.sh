@@ -1,12 +1,16 @@
 # theterminal.sh Bitcoin Puzzle Workbook
-    
-This repository contains information in regards to solving the puzzle "thetherminal.sh"
+
+This repository contains information in regards to solving the puzzle
+"thetherminal.sh"
 
 http://www.theterminal.sh
-    
-[Original reddit thread](https://www.reddit.com/r/Bitcoin/comments/6r316b/there_is_1btc_hidden_in_the_terminal_it_is_yours/)  
-[Original Removeddit](https://www.removeddit.com/r/Bitcoin/comments/6r316b/there_is_1btc_hidden_in_the_terminal_it_is_yours/)  
-[Current reddit thread](https://www.reddit.com/r/bitcoinpuzzles/comments/7vphjz/theterminalsh/)  
+
+[Original reddit
+thread](https://www.reddit.com/r/Bitcoin/comments/6r316b/there_is_1btc_hidden_in_the_terminal_it_is_yours/)
+[Original
+Removeddit](https://www.removeddit.com/r/Bitcoin/comments/6r316b/there_is_1btc_hidden_in_the_terminal_it_is_yours/)
+[Current reddit
+thread](https://www.reddit.com/r/bitcoinpuzzles/comments/7vphjz/theterminalsh/)
 
 Current Prize: [2 BTC](http://www.theterminal.sh/components/motd.html)
 
