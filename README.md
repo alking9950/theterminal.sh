@@ -118,7 +118,16 @@ B105F026.
 
 
 Note: While `B105F00D` returns the same result as `b105f00d`, `3E7` returns a
-different result than `3e7`. I'm not sure what to make of that.
+different result than `3e7`. ~~I'm not sure what to make of that.~~
+
+Note Update: It turns out the parser on the server interprets `3e7` as `3 *
+10^7`, or `30000000` hence why it doesn't respond as locked. Another example is
+`1e7`, or `10000000`, the evaluated string is no more than 8 characters long so
+it is a valid address. `1e8` (`100000000`) is 9 characters long so `ERROR:
+INVALID MEMORY ADDRESS` is returned. Finally `1e20` is an invalid memory
+address because the resulting number is 21 characters long, however, `1e21`
+results in `ERROR: ADDRESS IS LOCKED` because Javascript converts `1e21` into
+`1e+21` which is only 5 characters long.
 
 Command Discovered by ludu in Discord channel.
 
