@@ -129,6 +129,39 @@ address because the resulting number is 21 characters long, however, `1e21`
 results in `ERROR: ADDRESS IS LOCKED` because Javascript converts `1e21` into
 `1e+21` which is only 5 characters long.
 
+`mem D15EA5E` returns a list of links whose output looks like:
+
+```
+**WARNING:** This memory address has been infected.
+Please select reboot sequence key to reload permission table.
+[E3F0EA4C707](/reboot/6803ad/e3f0ea4c707)[F93F2CD2062](/reboot/6803ad/f93f2cd2062)[E139FA822D6](/reboot/6803ad/e139fa822d6)[EE5F2C8F3D2](/reboot/6803ad/ee5f2c8f3d2)
+[E6E9EE7F757](/reboot/6803ad/e6e9ee7f757)[F443B3C7BB5](/reboot/6803ad/f443b3c7bb5)[DAAA5B87770](/reboot/6803ad/daaa5b87770)[EE68D4A98EE](/reboot/6803ad/ee68d4a98ee)
+[E2D08A23AC3](/reboot/6803ad/e2d08a23ac3)[FDFF48C8744](/reboot/6803ad/fdff48c8744)[E84119A4F01](/reboot/6803ad/e84119a4f01)[F666A541C46](/reboot/6803ad/f666a541c46)
+[FCF7795571E](/reboot/6803ad/fcf7795571e)[F6D913EAC34](/reboot/6803ad/f6d913eac34)[FD52AFD054D](/reboot/6803ad/fd52afd054d)[FC3F6B8BDA4](/reboot/6803ad/fc3f6b8bda4)
+[F98686F1165](/reboot/6803ad/f98686f1165)[F35B71BC785](/reboot/6803ad/f35b71bc785)[F7670142F96](/reboot/6803ad/f7670142f96)[F579513B608](/reboot/6803ad/f579513b608)
+[F2FE2669E57](/reboot/6803ad/f2fe2669e57)[DBC264530C5](/reboot/6803ad/dbc264530c5)[FD86800A849](/reboot/6803ad/fd86800a849)[E3B3D427860](/reboot/6803ad/e3b3d427860)
+[E9832327F23](/reboot/6803ad/e9832327f23)[E29D17CAD61](/reboot/6803ad/e29d17cad61)[F9A1A8B1A2C](/reboot/6803ad/f9a1a8b1a2c)[E084EE75BA0](/reboot/6803ad/e084ee75ba0)
+[EEFA0C654E5](/reboot/6803ad/eefa0c654e5)[E2D83E4604A](/reboot/6803ad/e2d83e4604a)[EEB69EDC2DC](/reboot/6803ad/eeb69edc2dc)[EC1374C3DE4](/reboot/6803ad/ec1374c3de4)
+[F3B500E5094](/reboot/6803ad/f3b500e5094)[E3BA612558B](/reboot/6803ad/e3ba612558b)[F0FC90B3C0E](/reboot/6803ad/f0fc90b3c0e)[EA6A3BF1534](/reboot/6803ad/ea6a3bf1534)
+[ECD567E411C](/reboot/6803ad/ecd567e411c)[E5B403F9FD6](/reboot/6803ad/e5b403f9fd6)[E95E9F928FC](/reboot/6803ad/e95e9f928fc)[FA883921BC9](/reboot/6803ad/fa883921bc9)
+[E10DC337382](/reboot/6803ad/e10dc337382)[E709F91C502](/reboot/6803ad/e709f91c502)[F5B96E6392A](/reboot/6803ad/f5b96e6392a)[F416B42F5A3](/reboot/6803ad/f416b42f5a3)
+[FFE84AFE215](/reboot/6803ad/ffe84afe215)[F9296EBCEE3](/reboot/6803ad/f9296ebcee3)[F1DCE7B3B73](/reboot/6803ad/f1dce7b3b73)[F49CD46CFFD](/reboot/6803ad/f49cd46cffd)
+[EA82D0BA2B8](/reboot/6803ad/ea82d0ba2b8)[DBB443B6183](/reboot/6803ad/dbb443b6183)[E02794E4A6F](/reboot/6803ad/e02794e4a6f)[E1D9C4F7248](/reboot/6803ad/e1d9c4f7248)
+[FA4C69D955D](/reboot/6803ad/fa4c69d955d)[FC774A1F301](/reboot/6803ad/fc774a1f301)[FA671484C0F](/reboot/6803ad/fa671484c0f)[DF19CE5F596](/reboot/6803ad/df19ce5f596)
+[E82E86AC4B5](/reboot/6803ad/e82e86ac4b5)[FB7DFB27A89](/reboot/6803ad/fb7dfb27a89)[F49E50D5A0A](/reboot/6803ad/f49e50d5a0a)[E6018DD7F14](/reboot/6803ad/e6018dd7f14)
+[E3FF7C59262](/reboot/6803ad/e3ff7c59262)[F1C9A258BEF](/reboot/6803ad/f1c9a258bef)[EF21BEA7A53](/reboot/6803ad/ef21bea7a53)[F0FF7322C2B](/reboot/6803ad/f0ff7322c2b)
+[F5F45EAC1BB](/reboot/6803ad/f5f45eac1bb)[E982029341C](/reboot/6803ad/e982029341c)[F334A6F1B91](/reboot/6803ad/f334a6f1b91)[E21DA87204B](/reboot/6803ad/e21da87204b)
+[DDBA3036ECC](/reboot/6803ad/ddba3036ecc)[EAE318BB624](/reboot/6803ad/eae318bb624)[E9AA1B94912](/reboot/6803ad/e9aa1b94912)[FF2A0059147](/reboot/6803ad/ff2a0059147)
+[FA93F5E21B4](/reboot/6803ad/fa93f5e21b4)[F524E2A9406](/reboot/6803ad/f524e2a9406)[E2D6F13A94C](/reboot/6803ad/e2d6f13a94c)[DE6EB50E649](/reboot/6803ad/de6eb50e649)
+[E6895139BCE](/reboot/6803ad/e6895139bce)[E9D31F1A43E](/reboot/6803ad/e9d31f1a43e)[F60ACA25048](/reboot/6803ad/f60aca25048)[F9F4ED7EC6D](/reboot/6803ad/f9f4ed7ec6d)
+[DEC35BD2C1C](/reboot/6803ad/dec35bd2c1c)[DD1796EA70C](/reboot/6803ad/dd1796ea70c)[EBEB81C1E8C](/reboot/6803ad/ebeb81c1e8c)[EFEF35FB9DD](/reboot/6803ad/efef35fb9dd)
+```
+
+As far as we know all links at this point redirect with a body containing
+`Found. Redirecting to /reboot.html`.
+
+`D15EA5E` address discovered by mapleleaffan_09 on discord.
+
 Command Discovered by ludu in Discord channel.
 
 ### motd
