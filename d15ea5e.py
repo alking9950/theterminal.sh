@@ -74,6 +74,10 @@ def gather_data():
             mapping[first] = sorted(mapping[first])
     except KeyboardInterrupt:
         pass
+    except:
+        import traceback
+        traceback.print_exc()
+        print('Saving...')
     with open('disease_data.json', 'w') as fp:
         json.dump(mapping, fp, indent=2, separators=(',', ': '),
                   sort_keys=True)
