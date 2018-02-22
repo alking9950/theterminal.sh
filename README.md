@@ -160,9 +160,8 @@ Please select reboot sequence key to reload permission table.
 As far as we know all links at this point redirect with a body containing
 `Found. Redirecting to /reboot.html`.
 
-`D15EA5E` address discovered by mapleleaffan_09 on discord.
-
-Command Discovered by ludu in Discord channel.
+* `D15EA5E` address discovered by mapleleaffan_09 in discord channel.
+* `mem` command discovered by ludu in discord channel.
 
 ### motd
 
