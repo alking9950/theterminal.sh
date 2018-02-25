@@ -160,6 +160,9 @@ Please select reboot sequence key to reload permission table.
 As far as we know all links at this point redirect with a body containing
 `Found. Redirecting to /reboot.html`.
 
+User ludu discovered a set of duplicate "key" value (first part of url), which
+may be of interest. Those can be found in `generated/duplicate_keys.txt`.
+
 * `D15EA5E` address discovered by mapleleaffan_09 in discord channel.
 * `mem` command discovered by ludu in discord channel.
 
