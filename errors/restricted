@@ -1,0 +1,11 @@
+TypeError: 'caller' and 'arguments' are restricted function properties and cannot be accessed in this context.
+    at Object.exports.write_shared_loc (/home/alexander/theterminal.sh/lib/memory.js:98:33)
+    at /home/alexander/theterminal.sh/server.js:37:25
+    at Layer.handle [as handle_request] (/home/alexander/theterminal.sh/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/alexander/theterminal.sh/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/alexander/theterminal.sh/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/alexander/theterminal.sh/node_modules/express/lib/router/layer.js:95:5)
+    at /home/alexander/theterminal.sh/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/alexander/theterminal.sh/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/alexander/theterminal.sh/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/alexander/theterminal.sh/node_modules/serve-static/index.js:121:7)
