@@ -163,8 +163,46 @@ As far as we know all links at this point redirect with a body containing
 User ludu discovered a set of duplicate "key" value (first part of url), which
 may be of interest. Those can be found in `generated/duplicate_keys.txt`.
 
+`mem write protected` outputs a grid like the following:
+
+```
+**WARNING:** Writing to protected memory will affect all system processes !
+oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+oooooooooooooooooooooooooooooooo
+................................
+00000000000000000000000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+oooooooooooooooooooooooooooooooo
+................................
+00000000000000000000000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+oooooooooooooooooooooooooooooooo
+................................
+00000000000000000000000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+oooooooooooooooooooooooooooooooo
+................................
+00000000000000000000000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+```
+
+This grid has 17 rows, and 32 columns. Each of the 544 columns is clickable
+resulting in a request to
+http://theterminal.sh/mem/write?bus=ROW&i=COLUMN. Both ROW and COLUMN are zero
+indexed. Such a request will toggle values in a loop between `0`, `O`, `o`, and
+`.`. The response to the request is the newly set value.
+
+This grid appears to be globally shared for all users as confirmed by members
+of the discord channel.
+
+On the day this command was discovered, there was a bug in the system revealing
+some of the stack traces as described here:
+https://github.com/bboe/theterminal.sh/tree/master/errors. That bug appears to
+have been since fixed.
+
 * `D15EA5E` address discovered by mapleleaffan_09 in discord channel.
 * `mem` command discovered by ludu in discord channel.
+* `mem write protected` discovered by Max[0] in discord channel.
 
 ### motd
 
