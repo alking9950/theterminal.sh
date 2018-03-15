@@ -200,9 +200,12 @@ some of the stack traces as described here:
 https://github.com/bboe/theterminal.sh/tree/master/errors. That bug appears to
 have been since fixed.
 
+`mem exec protected` thus far appears to only output `ERROR: INVALID PROGRAM`.
+
 * `D15EA5E` address discovered by mapleleaffan_09 in discord channel.
 * `mem` command discovered by ludu in discord channel.
 * `mem write protected` discovered by Max[0] in discord channel.
+* `mem exec protected` apparently also discovered by Max[0] (I did not observe that).
 
 ### motd
 
